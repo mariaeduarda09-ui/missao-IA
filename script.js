@@ -13,16 +13,15 @@ const perguntas = [
         enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
         alternativas: [
             {
-                texto: "Isso é assustador!", // Nova estrutura de objeto
+                texto: "Isso é assustador!", 
                 afirmacao: "afirmação"
             },
             {
-                texto: "Isso é maravilhoso!", // Nova estrutura de objeto
+                texto: "Isso é maravilhoso!", 
                 afirmacao: "afirmação"
             }
         ]
     },
-    // ... outras perguntas
 ];
 
 const perguntas = [
@@ -70,7 +69,7 @@ function mostraPergunta() {
     }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = ""; // Adicionado para limpar as alternativas anteriores
+    caixaAlternativas.textContent = ""; 
     mostraAlternativas();
 }
 
