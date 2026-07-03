@@ -63,16 +63,16 @@ const perguntas = [
     }
 ];
 
-let atual = 0;
-let perguntaAtual;
-
 function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    mostraAlternativas(); // Adicione esta linha aqui
+    caixaAlternativas.textContent = ""; // Adicionado para limpar as alternativas anteriores
+    mostraAlternativas();
 }
-
-mostraPergunta();
 
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas) {
