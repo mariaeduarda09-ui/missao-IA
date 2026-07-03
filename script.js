@@ -83,10 +83,15 @@ function mostraAlternativas(){
     }
 }
 
-function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacoes;
-    historiaFinal = afirmacoes;
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historia += afirmacoes + ""; // Adicionado para concatenar as afirmações
     atual++;
     mostraPergunta();
 }
-mostraPergunta();
+
+function mostraResultado() {
+    caixaPerguntas.textContent = "Em 2049...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = ""; // Adicionado para ocultar as alternativas no resultado
+}
